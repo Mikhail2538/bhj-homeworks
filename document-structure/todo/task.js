@@ -29,14 +29,3 @@ taskForm.addEventListener("submit", (event) => {
     taskInput.value = "";
   }
 });
-taskInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    const taskText = taskInput.value.trim();
-    if (taskText !== "") {
-      const newTask = createTask(taskText);
-      taskList.appendChild(newTask);
-      taskInput.value = "";
-    }
-  }
-});
